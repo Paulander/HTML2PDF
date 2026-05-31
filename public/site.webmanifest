@@ -1,0 +1,9 @@
+{
+  "name": "PDFForge Lite",
+  "short_name": "PDFForge",
+  "description": "HTML-to-PDF generation API for small SaaS and no-code workflows.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#0f766e"
+}

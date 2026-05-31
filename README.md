@@ -4,7 +4,7 @@ PDFForge Lite is a production-minded MVP for an HTML-to-PDF generation API. Send
 
 ## Features
 
-- Next.js dashboard, playground, docs, pricing, and usage pages
+- Next.js dashboard, playground, docs, pricing, marketing, and usage pages
 - `POST /api/v1/pdf` returning `application/pdf`
 - Playwright/Chromium rendering in a single service module
 - API key check with local demo fallback
