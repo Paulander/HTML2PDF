@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model ApiConsumer {
+  id          String          @id @default(cuid())
+  label       String          @unique
+  keyHash     String?
+  createdAt   DateTime        @default(now())
+  generations PdfGeneration[]
+}
+
+model PdfGeneration {
+  id            String      @id @default(cuid())
+  consumerId    String?
+  consumer      ApiConsumer? @relation(fields: [consumerId], references: [id], onDelete: SetNull)
+  createdAt     DateTime    @default(now())
+  status        String
+  durationMs    Int
+  payloadType   String
+  approximateBytes Int
+  errorMessage  String?
+
+  @@index([createdAt])
+  @@index([consumerId])
+}

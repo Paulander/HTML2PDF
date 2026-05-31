@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+coverage
+dist
+.env
+.env*.local
+dev.db
+dev.db-journal
+prisma/dev.db
+prisma/dev.db-journal
+*.sqlite
+*.sqlite-journal
+playwright-report
+test-results
+npm-debug.log*
+.DS_Store
